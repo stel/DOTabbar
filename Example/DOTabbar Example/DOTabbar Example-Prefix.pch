@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DOTabbar Example' target in the 'DOTabbar Example' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
