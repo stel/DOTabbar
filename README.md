@@ -4,6 +4,8 @@
 
 It's compatiable with OSX 10.7+ and autolayout ready.
 
+<img src="http://i.imgur.com/JCas8Wa.png" alt="" />
+
 ## Ussage
 
 ### Copy files
