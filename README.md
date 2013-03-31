@@ -8,6 +8,8 @@ It's compatiable with OSX 10.7+ and autolayout ready.
 
 ## Ussage
 
+Don't forget to [check out an example project](https://github.com/stel/DOTabbar/tree/master/Example).
+
 ### Copy files
 
 You need to copy the following files to your project:
@@ -20,8 +22,6 @@ You need to copy the following files to your project:
 Make sure to add them to the target.
 
 ### Use in project
-
-Don't forget to [check out an example project](https://github.com/stel/DOTabbar/tree/master/Example).
 
 You can use `DOTabbar` in Inteface Builder: just drag a Custom View into your window and set it class to `DOTabbar`. After that you need to set a delegate to your tab bar and implement it.
 
