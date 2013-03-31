@@ -48,7 +48,7 @@ Your delegate must adopt `DOTabbarDelegate` protocol:
 
 ## Customizing
 
-For customizing tab bar you can create you custom `NSCell` subclass and return it in your delegate `tabbar:cellForItemIdentifier:` method.
+For customizing tab bar you can create your custom `NSCell` subclass and return it in your delegate `tabbar:cellForItemIdentifier:` method.
 
 ## License
 
