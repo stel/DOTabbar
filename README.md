@@ -23,7 +23,7 @@ Don't forget to [check out an example project](https://github.com/stel/DOTabbar/
 
 You can use `DOTabbar` in Inteface Builder: just drag a Custom View into your window and set it class to `DOTabbar`. After that you need to set a delegate to your tab bar and implement it.
 
-Your delegate must adops `DOTabbarDelegate` protocol:
+Your delegate must adopt `DOTabbarDelegate` protocol:
 
 	@protocol DOTabbarDelegate <NSObject>
 		// Your groups identifiers
@@ -42,8 +42,11 @@ Your delegate must adops `DOTabbarDelegate` protocol:
 		
 		// Informs delegate that new item was selected
 		- (void)tabbar:(DOTabbar *)tabbar didSelectItemWithIdentifier:(NSString *)identifier;
-		
 	@end
+
+## Customizing
+
+For customizing tab bar you can create you custom `NSCell` subclass and return it in your delegate `tabbar:cellForItemIdentifier:` method.
 
 ## License
 
