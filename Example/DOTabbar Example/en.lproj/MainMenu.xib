@@ -1316,7 +1316,6 @@
 							<string key="NSFrame">{{0, 297}, {480, 63}}</string>
 							<reference key="NSSuperview" ref="98371726"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSHuggingPriority">{250, 750}</string>
 							<string key="NSClassName">DOTabbar</string>
@@ -2013,6 +2012,14 @@
 						<reference key="destination" ref="1026861471"/>
 					</object>
 					<int key="connectionID">543</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tabbar</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="675672221"/>
+					</object>
+					<int key="connectionID">545</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -3287,7 +3294,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">544</int>
+			<int key="maxID">545</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

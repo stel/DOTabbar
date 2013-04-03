@@ -28,6 +28,11 @@ static NSString *SettingsItemIdentifier = @"item6";
 	NSLog(@"I'll set view for identifier \"%@\" here soon", identifier);
 }
 
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+	[self.tabbar selectItemWithIdentifier:FontItemIdentifier];
+}
+
 #pragma mark - DOTabBarDelegate
 
 - (void)tabbar:(DOTabbar *)tabbar didSelectItemWithIdentifier:(NSString *)identifier

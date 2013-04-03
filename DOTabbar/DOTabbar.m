@@ -140,13 +140,15 @@ static NSDictionary *GroupTitleAttributes;
 {
 	NSCell *selectedCell = [sender selectedCell];
 	
-	[_matrices makeObjectsPerformSelector:@selector(deselectAllCells)];
-	[(NSMatrix *)selectedCell.controlView selectCell:selectedCell];
-	
-	self.selectedIdentifier = selectedCell.identifier;
-	
-	if ([self.delegate respondsToSelector:@selector(tabbar:didSelectItemWithIdentifier:)]) {
-		[self.delegate tabbar:self didSelectItemWithIdentifier:self.selectedIdentifier];
+	if (selectedCell != nil) {
+		[_matrices makeObjectsPerformSelector:@selector(deselectAllCells)];
+		[(NSMatrix *)selectedCell.controlView selectCell:selectedCell];
+		
+		[self selectItemWithIdentifier:selectedCell.identifier];
+		
+		if ([self.delegate respondsToSelector:@selector(tabbar:didSelectItemWithIdentifier:)]) {
+			[self.delegate tabbar:self didSelectItemWithIdentifier:self.selectedIdentifier];
+		}
 	}
 }
 
@@ -158,15 +160,19 @@ static NSDictionary *GroupTitleAttributes;
 	
 	[_matrices makeObjectsPerformSelector:@selector(deselectAllCells)];
 	
-	NSCell *cell = [_cachedCells objectForKey:identifier];;
+	NSCell *cell = [_cachedCells objectForKey:identifier];
+	
+	[self willChangeValueForKey:@"selectedIdentifier"];
 	
 	if (cell != nil) {
 		[(NSMatrix *)cell.controlView selectCell:cell];
 		
-		self.selectedIdentifier = identifier;
+		_selectedIdentifier = identifier;
 	} else {
-		self.selectedIdentifier = nil;
+		_selectedIdentifier = nil;
 	}
+	
+	[self didChangeValueForKey:@"selectedIdentifier"];
 }
 
 #pragma mark - Layout
